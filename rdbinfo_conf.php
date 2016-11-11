@@ -8,3 +8,5 @@ define('DB_HOST', '');
 define('DB_USER', '');
 define('DB_USERPASSWD', '');
 define('DB_NAME', '');
+
+define('RDBINFO_TOKEN', '');

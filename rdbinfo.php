@@ -32,4 +32,8 @@ function di_mysql_stat($host, $user, $password, $dbName)
 }
 
 // main process
-echo json_encode(di_mysql_stat(DB_HOST, DB_USER, DB_USERPASSWD, DB_NAME));
+if (@$_GET['token'] == RDBINFO_TOKEN) {
+    echo json_encode(di_mysql_stat(DB_HOST, DB_USER, DB_USERPASSWD, DB_NAME));
+} else {
+    exit(1);
+}
