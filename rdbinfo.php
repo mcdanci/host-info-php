@@ -16,7 +16,6 @@ function di_mysql_stat($host, $user, $password, $dbName)
         return array(mysqli_connect_error());
     } else {
         $result = explode('  ', $link->stat());
-        var_dump($link->stat()); // todo: debug
         foreach ($result as $k => $v) {
             list($subK, $subV) = explode(': ', $v);
             $stat[$subK] = $subV;
