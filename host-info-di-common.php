@@ -14,16 +14,16 @@ if (!defined('PHP_VERSION_ID')) {
  */
 function di_OS_isWin() {
     if (PHP_VERSION_ID >= 40300) {
-        return (PHP_SHLIB_SUFFIX == 'dll') ? true : false;
+        return PHP_SHLIB_SUFFIX == 'dll';
     } else {
-        //return (strtoupper(substr(PHP_OS, 0, 3)) == 'WIN') ? true : false;
+        //return strtoupper(substr(PHP_OS, 0, 3)) == 'WIN';
         return !function_exists('sys_getloadavg');
     }
 }
 
 /**
  * @param string $library
- * @return bool|null 已載入則爲 null。
+ * @return bool|null 已載入則爲 null
  */
 function di_dl($library)
 {
