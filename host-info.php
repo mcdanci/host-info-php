@@ -7,10 +7,10 @@
 const DEBUG = true;
 
 // section main process
-include_once './di_common.php';
+include './host-info-common.php';
 
 $data['constants'] = get_defined_constants();
-$data['$GLOBALS'] = $GLOBALS;
+$data['GLOBALS'] = $GLOBALS;
 
 // 作業系統相關
 $data['OS']['is Windows'] = DI_OS_IS_WIN;
